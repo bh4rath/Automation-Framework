@@ -11,6 +11,7 @@ public class ExtentReportGeneration {
 		ExtentSparkReporter reports = new ExtentSparkReporter(path);
 		reports.config().setReportName("Automation Test Results");
 		reports.config().setDocumentTitle("Test Reports");
+		reports.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(reports);
 		extent.setSystemInfo("Tester", "Bharath");
