@@ -8,8 +8,15 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.HomePage;
 
+
+
+/**
+ * @author Bharath Selvam
+ *
+ */
 public class BaseTest {
 	public static WebDriver driver;
 	protected HomePage homePage;
@@ -18,6 +25,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void launchApplication	() {
 		setChromeDriverProperty();
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -32,6 +40,5 @@ public class BaseTest {
 	 
 	private static void setChromeDriverProperty() {
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Backup\\eclipse-workspace\\automation\\Resources\\chromedriver.exe");
 	}
 }
