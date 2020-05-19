@@ -13,7 +13,9 @@ This is a sample project which demonstrates Page Object Model for selenium.
 2. cd Automation-Framework
 3. mvn clean test
 
-Test Execution Report Screenshot:
+## Test Execution Report Screenshot:
+
+
 ![image](https://user-images.githubusercontent.com/34835631/82294154-50ba0300-99cb-11ea-8994-d89eae54ba13.png)
 
 
