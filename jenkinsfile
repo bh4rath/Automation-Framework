@@ -4,6 +4,10 @@ agent any
 environment {
     PATH = "C:\\WINDOWS\\SYSTEM32"
 }
+tools {
+        maven 'MAVEN_HOME'
+        jdk 'JAVA_HOME'
+    }
 stages
 {
 stage('Build')
