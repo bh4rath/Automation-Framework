@@ -1,7 +1,6 @@
 pipeline
 {
 agent any
-
 stages
 {
 stage('Build')
@@ -18,18 +17,11 @@ steps
 echo 'Deploying the code'
 }
 }
-stage('Build')
+stage('Test')
 {
 steps
 {
 bat "mvn test"
-}
-}
-stage('Build')
-{
-steps
-{
-bat "mvn site"
 }
 }
 }
